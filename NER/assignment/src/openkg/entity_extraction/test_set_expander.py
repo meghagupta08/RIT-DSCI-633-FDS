@@ -36,9 +36,12 @@ def test_set_expander_get_entities():
     for x in entities:
         print(x)
 
-    # removing the downloaded tar file if exists
-    if os.path.isfile('enwiki-20171201_pretrained_set_expansion.txt.tar.gz'):
-        os.remove('enwiki-20171201_pretrained_set_expansion.txt.tar.gz')
+    try:
+        # removing the downloaded tar file if exists
+        if os.path.isfile('enwiki-20171201_pretrained_set_expansion.txt.tar.gz'):
+            os.remove('enwiki-20171201_pretrained_set_expansion.txt.tar.gz')
+    except:
+        print("An error occured while removing enwiki-20171201_pretrained_set_expansion.txt.tar.gz")
 
 
 def test_set_expander_train():
@@ -68,9 +71,12 @@ def test_set_expander_train():
 
     model.train()
 
-    # removing the downloaded tar file if exists
-    if os.path.isfile('enwiki-20171201_spacy_marked.txt.tar.gz'):
-        os.remove('enwiki-20171201_spacy_marked.txt.tar.gz')
+    try:
+        # removing the downloaded tar file if exists
+        if os.path.isfile('enwiki-20171201_spacy_marked.txt.tar.gz'):
+            os.remove('enwiki-20171201_spacy_marked.txt.tar.gz')
+    except:
+        print("An error occurred while removing enwiki-20171201_spacy_marked.txt.tar.gz")
 
 
 
